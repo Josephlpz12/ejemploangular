@@ -1,0 +1,40 @@
+<br>
+<br>
+<form (ngSubmit)="guardarExamen()" id="examenForm">
+    <input type="text" 
+    [(ngModel)]="examen.idexamen" 
+    [ngModelOptions]="{standalone:true}"
+    placeholder="Id_Examen"
+    required>
+    <br>
+    <br>
+    <input type="int" 
+    [(ngModel)]="examen.noParcial" 
+    [ngModelOptions]="{standalone:true}"
+    placeholder="noParcial"
+    required>
+    <br>
+    <br>
+    <input type="date" 
+    [(ngModel)]="examen.fechaExamen" 
+    [ngModelOptions]="{standalone:true}"
+    placeholder="Fecha_Examen"
+    required>
+    <br>
+    <br>
+    <input type="int" 
+    [(ngModel)]="examen.nota" 
+    [ngModelOptions]="{standalone:true}"
+    placeholder="nota"
+    required>
+    <br>
+    <br>
+    <input type="text" 
+    [(ngModel)]="examen.carnet"  
+    [ngModelOptions]="{standalone:true}"
+    placeholder="carnet"
+    required>
+    <br>
+    <br>
+    <input type="submit">
+</form>

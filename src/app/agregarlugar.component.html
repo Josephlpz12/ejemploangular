@@ -1,0 +1,75 @@
+<br>
+<br>
+<div class="container">
+   
+        <h1 > Crear lugares</h1>
+        <br>
+        
+<form (ngSubmit)="guardarLugar()" id="lugarForm">
+    
+    <input type="text" class="form-control"
+    [(ngModel)]="lugar.idlugar" 
+    [ngModelOptions]="{standalone:true}"
+    placeholder="Id_Lugar"
+    required>
+    <br>
+    <br>
+    <input type="text" class="form-control"
+    [(ngModel)]="lugar.nombre" 
+    [ngModelOptions]="{standalone:true}"
+    placeholder="Nombre"
+    required>
+    <br>
+    <br>
+    <input type="text" class="form-control"
+    [(ngModel)]="lugar.descripcion" 
+    [ngModelOptions]="{standalone:true}"
+    placeholder="Descripcion"
+    required>
+    <br>
+    <br>
+    <input (change)="handleUpload($event)" type="file" class="form-control" 
+    [(ngModel)]="lugar.imagen" 
+    [ngModelOptions]="{standalone:true}"
+    placeholder="Imagen"
+    required>
+    <br>
+    <br>
+    <input type="submit" class="btn btn-outline-success float-end" value="Guardar">
+    <button class="btn btn-outline-primary" (click)="limiarFormulario()">Limpiar formulario</button>
+    
+</form>
+<table class="table">
+    <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Acciones</th>
+          <th scope="col">Id Lugar</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Descripcion</th>
+          <th scope="col">Imagen</th>
+     
+          
+        </tr>
+      </thead>
+
+<tbody>
+    <tr *ngFor="let lugar of lugares">
+      <th scope="row">{{lugar.idlugar}}</th>
+      <td><button class="btn btn-outline-primary" (click)="modificar(lugar)">Modificar</button>
+          &nbsp;
+          <button class="btn btn-outline-warning" (click)="eliminar(lugar)">Eliminar</button>
+      </td>
+      <td>{{lugar.idlugar}}</td>
+      <td>{{lugar.nombre}}</td>
+      <td>{{lugar.descripcion}}</td>
+      <td><img width="200px" [src]="lugar.imagen" alt=""></td>
+
+
+    
+
+    </tr>
+  </tbody>
+</table>
+
+</div>

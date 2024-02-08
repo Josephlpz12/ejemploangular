@@ -1,0 +1,87 @@
+<br>
+<br>
+<div class="container">
+    <h1 > Crear Anuncios</h1>
+    <br>
+<form (ngSubmit)="guardarAnuncio()" id="anuncioForm">
+    <input type="text" class="form-control"
+    [(ngModel)]="anuncio.idanuncio" 
+    [ngModelOptions]="{standalone:true}"
+    placeholder="Id_Anuncio"
+    required>
+    <br>
+    <br>
+    <input type="text" class="form-control"
+    [(ngModel)]="anuncio.texto" 
+    [ngModelOptions]="{standalone:true}"
+    placeholder="Texto"
+    required>
+    <br>
+    <br>
+    <input (change)="handleUpload($event)" type="file" class="form-control"
+    [(ngModel)]="anuncio.imagen" 
+    [ngModelOptions]="{standalone:true}"
+    placeholder="Imagen"
+    required>
+    <br>
+    <br>
+    <input type="date" class="form-control"
+    [(ngModel)]="anuncio.fechaInicio" 
+    [ngModelOptions]="{standalone:true}"
+    placeholder="Fecha_Inicio"
+    required>
+    <br>
+    <br>
+    <input type="date" class="form-control"
+    [(ngModel)]="anuncio.fechaFin"  
+    [ngModelOptions]="{standalone:true}"
+    placeholder="Fecha_Fin"
+    required>
+    <br>
+    <br>
+    
+    
+    
+    <select class="form-select" aria-label="Seleccione" [(ngModel)]="anuncio.idtipoAnuncio"
+    [ngModelOptions]="{standalone:true}" required>
+      <option selected></option>
+      <option *ngFor="let tipoanuncio of tipoanuncio" value="{{tipoanuncio.idtipoAnuncio}}">{{tipoanuncio.idtipoAnuncio}}</option>
+    </select>
+  
+    <br>
+    <input type="submit" class="btn btn-outline-success float-end" value="Guardar">
+    <button class="btn btn-outline-primary" (click)="limiarFormulario()">Limpiar formulario</button>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Acciones</th>
+          <th scope="col">Id Anuncio</th>
+          <th scope="col">Texto</th>
+          <th scope="col">Imagen</th>
+          <th scope="col">Fecha de Inicio</th>
+          <th scope="col">Fecha de Fin</th>
+          <th scope="col">TipoAnuncio</th>
+     
+          
+        </tr>
+      </thead>
+
+<tbody>
+    <tr *ngFor="let anuncio of anuncios">
+      <th scope="row">{{anuncio.idanuncio}}</th>
+      <td><button class="btn btn-outline-primary" (click)="modificar(anuncio)">Modificar</button>
+          &nbsp;
+          <button class="btn btn-outline-warning" (click)="eliminar(anuncio)">Eliminar</button>
+      </td>
+      <td>{{anuncio.idanuncio}}</td>
+      <td>{{anuncio.texto}}</td>
+      <td><img width="200px" [src]="anuncio.imagen" alt=""></td>
+      <td>{{anuncio.fechaInicio | date}}</td>
+      <td>{{anuncio.fechaFin | date}}</td>
+      <td>{{anuncio.idtipoAnuncio | tipoanuncio : tipoanuncio}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>

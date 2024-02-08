@@ -1,0 +1,14 @@
+.tamano{
+    width: 100% !important;
+   
+    
+}
+
+.fondo{
+   background: #76bef1;
+   width: 25rem;
+   height: 30rem;
+   text-align: center;
+   border-radius: 10px;
+   padding: 5%;
+}

@@ -1,0 +1,39 @@
+<div class="container">
+<div class="position-absolute top-50 start-50 translate-middle">
+<div class="fondo">
+    <div class="text-bg-warning p-3 rounded-5" style="max-width: 28rem;">
+       
+<h1>Perfil Administrador</h1>
+<br>
+<div class="centrar">
+<p>{{administrador.usuario}}</p>
+<p>{{administrador.password}}</p>
+<p>{{administrador.universidad}}</p>
+<p>{{administrador.nombre}}</p>
+<p>{{administrador.carnet}}</p>
+<p>{{administrador.curso}}</p>
+
+
+
+<form (ngSubmit)="ModificarPassword()" id="passwordForm" class="form-control">
+
+        <label class="form-label">Password actual:
+            <br> {{administrador.password}}
+        </label>
+        <br>
+        <label class="form-label">Password nuevo: </label>
+        <input type="text" class="form-control" [(ngModel)]="administradorpassword.password"
+        [ngModelOptions]="{standalone:true}" placeholder="Ingresa nuevo password" required>
+        <br>
+        <input type="submit" class="rounded-5" value="Modificar">
+
+</form>
+
+
+
+</div>
+
+</div>
+</div>
+</div>
+</div>

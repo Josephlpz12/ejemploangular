@@ -1,0 +1,10 @@
+<div>
+    <ul *ngFor="let anuncio of anuncio">
+     
+        <li>{{anuncio.idanuncio}}</li>
+        <li>{{anuncio.texto}}</li>
+        <img width="200px" [src]="anuncio.imagen" alt="">
+        <li>{{anuncio.fechaInicio | date}}</li>
+        <li>{{anuncio.fechaFin | date}}</li>
+    </ul>
+</div>

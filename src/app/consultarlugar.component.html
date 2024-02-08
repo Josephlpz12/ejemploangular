@@ -1,0 +1,10 @@
+<div>
+    <ul *ngFor="let lugar of lugar">
+     
+        <li>{{lugar.idlugar}}</li>
+        <li>{{lugar.nombre}}</li>
+        <li>{{lugar.descripcion}}</li>
+        <img width="200px" [src]="lugar.imagen" alt="">
+        
+    </ul>
+</div>

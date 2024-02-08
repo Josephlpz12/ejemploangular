@@ -1,0 +1,12 @@
+<br>
+<br>
+<form (ngSubmit)="eliminarLugar(lugar)" id="idlugarForm">
+    <input type="text" 
+    [(ngModel)]="lugar.idlugar" 
+    [ngModelOptions]="{standalone:true}"
+    placeholder="idlugar"
+    required>
+    <br>
+    <br>
+    <input type="submit">
+</form>

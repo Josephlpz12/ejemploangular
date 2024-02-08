@@ -1,0 +1,55 @@
+
+<div class="container" >
+    
+    <div class="position-absolute top-50 start-50 translate-middle">
+        
+        <div class="box"> 
+<form (ngSubmit)="login()" id="loginForm">
+    
+    <div class="fondo">
+        <div class="text-center">
+            <img src="./assets/logo.png" alt="logo" style="height: 7rem;" >
+        </div>
+    <br>
+    <h1>Login</h1>
+    <hr>
+    <br>
+    
+    <div class="input-group">
+
+    <div class="input-group-text bg-info ">
+            <img src="./assets/username.png" alt="logo" style="height: 1rem;" >
+    </div>
+    <input class="form-control" type="text" 
+    [(ngModel)]="administrador.usuario" 
+    [ngModelOptions]="{standalone:true}"
+    placeholder="Username"
+    required >
+    </div>
+    
+    <br>
+
+    <div class="input-group">
+    <div class="input-group-text bg-info ">
+            <img src="./assets/password.png" alt="logo" style="height: 1rem;" >
+    </div>
+    <br>
+    <input class="form-control" type="password" 
+    [(ngModel)]="administrador.password"  
+    [ngModelOptions]="{standalone:true}"
+    placeholder="Password"
+    required>
+    </div>
+
+
+    <br>
+   <br> 
+    <div class="d-grid">
+    <input type="submit" class="btn btn-outline-primary float-end text-black" value="Sign in">
+    </div>
+    </div>
+
+</form>
+</div>
+    </div>
+</div>

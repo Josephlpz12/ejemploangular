@@ -1,0 +1,13 @@
+<div>
+    <ul *ngFor="let viaje of viaje">
+     
+        <li>{{viaje.idviaje}}</li>
+        <li>{{viaje.fechaPartida | date}}</li>
+        <li>{{viaje.fechaRegreso | date}}</li>
+        <li>{{viaje.cupo}}</li>
+        <li>{{viaje.descripcion}}</li>
+        <li>{{viaje.idestado}}</li>
+        <li>{{viaje.origen}}</li>
+        <li>{{viaje.destino}}</li>
+    </ul>
+</div>

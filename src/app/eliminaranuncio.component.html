@@ -1,0 +1,12 @@
+<br>
+<br>
+<form (ngSubmit)="eliminarAnuncio(anuncio)" id="idanuncioForm">
+    <input type="text" 
+    [(ngModel)]="anuncio.idanuncio" 
+    [ngModelOptions]="{standalone:true}"
+    placeholder="idanuncio"
+    required>
+    <br>
+    <br>
+    <input type="submit">
+</form>

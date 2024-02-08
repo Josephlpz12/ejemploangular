@@ -1,0 +1,9 @@
+<div>
+    <ul *ngFor="let reserva of reservas">
+     
+        <li>{{reserva.cantidadPasajeros}}</li>
+        <li>{{reserva.observaciones}}</li>
+        <li>{{reserva.correo}}</li>
+        <li>{{reserva.idestado | estados:estados}}</li>
+    </ul>
+</div>
